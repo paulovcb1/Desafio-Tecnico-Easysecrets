@@ -6,20 +6,20 @@ Este projeto é um dashboard interativo para análise de vendas, desenvolvido co
 ## Como Rodar Localmente
 
 1. **Clone o repositório:**
-   ```sh
+   ```bash
    git clone https://github.com/seu-usuario/grafico2.git
    cd grafico2
    npm install
    npm run dev
-
+   ```
 2. **Instale as dependências:**
-  ```sh
+  ```bash
    npm install
-
+  ```
 3. **Inicie o servidor de desenvolvimento**
-  ```sh
+  ```bash
    npm run dev
-
+ ```
 
 ## Demonstração
 
@@ -62,10 +62,7 @@ Este projeto é um dashboard interativo para análise de vendas, desenvolvido co
 ---
 
 ## Estrutura do Projeto
-
-
-
-```sh
+```bash
    grafico2/
 ├── src/
 │   ├── App.tsx
@@ -118,3 +115,4 @@ Este projeto é um dashboard interativo para análise de vendas, desenvolvido co
 ├── tsconfig.node.json
 ├── .gitignore
 ├── README.md
+```
