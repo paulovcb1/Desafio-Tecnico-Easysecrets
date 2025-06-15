@@ -16,7 +16,7 @@ export function CardResumo({ data }: Props) {
         quantidadeDeMeses > 0 ? totalVendas / quantidadeDeMeses : 0
 
     return (
-        <Card className="p-6 h-full ">
+        <Card className="p-6 h-full hover:shadow-lg transition duration-300 ease-in-out">
             <CardHeader className="pb-3">
                 <CardTitle className="text-xl">Resumo Executivo</CardTitle>
             </CardHeader>
@@ -32,7 +32,7 @@ export function CardResumo({ data }: Props) {
                         title="Média Mensal"
                         value={mediaMensal.toFixed(0)}
                         description="Unidades por mês"
-                        color="border-yellow-400"
+                        color="border-orange-400"
                     />
                     <MiniCard
                         title="Melhor Período"
