@@ -1,4 +1,4 @@
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 import { type Props, type Produto } from "../../types/types"
 import {
   ChartContainer,
@@ -12,7 +12,8 @@ import {
   Card,
   CardHeader,
   CardTitle,
-  CardDescription
+  CardDescription,
+  CardContent
 } from "@/components/ui/card"
 
 
@@ -49,33 +50,39 @@ export function GraficoBarra({ data }: Props) {
   const chartConfig = config(data);
 
   return (
-    <Card className="flex flex-col  hover:shadow-lg transition duration-300 ease-in-out">
-      <CardHeader className="items-center pb-0">
+    <Card className="flex flex-col p-4 hover:shadow-lg transition duration-300 ease-in-out ">
+      <CardHeader >
         <CardTitle>Gráfico de Vendas</CardTitle>
         <CardDescription>Janeiro - Junho 2025</CardDescription>
       </CardHeader>
-      <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
-        <BarChart accessibilityLayer data={chartData}>
-          <CartesianGrid vertical={false} />
-          <XAxis
-            dataKey="mes"
-            tickFormatter={v => v.slice(0, 3)}
-            tickLine={false}
-            axisLine={false}
-            tickMargin={10}
-          />
-          <ChartTooltip content={<ChartTooltipContent />} />
-          <ChartLegend content={<ChartLegendContent />} />
-          {data.map(prod => (
-            <Bar
-              key={prod.produto}
-              dataKey={prod.produto}
-              fill={`var(--color-${prod.produto})`}
-              radius={4}
+        <ChartContainer config={chartConfig} >
+          <BarChart data={chartData}>
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="mes"
+              tickFormatter={v => v.slice(0, 3)}
+              tickLine={false}
+              axisLine={false}
+              tickMargin={10}
             />
-          ))}
-        </BarChart>
-      </ChartContainer>
+            <YAxis
+              tickLine={false}
+              axisLine={false}
+              tickMargin={5}
+              width={30}
+            />
+            <ChartTooltip content={<ChartTooltipContent />} />
+            <ChartLegend content={<ChartLegendContent />} />
+            {data.map(prod => (
+              <Bar
+                key={prod.produto}
+                dataKey={prod.produto}
+                fill={`var(--color-${prod.produto})`}
+                radius={4}
+              />
+            ))}
+          </BarChart>
+        </ChartContainer>
     </Card>
   );
 }

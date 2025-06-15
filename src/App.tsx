@@ -1,58 +1,24 @@
 
-import { GraficoBarra } from './components/graficoBarra/graficoBarra'
-import { GraficoPizza } from './components/graficoPizza/GraficoPizza'
+import { GraficoBarra } from './components/graficos/graficoBarra'
+import { GraficoPizza } from './components/graficos/GraficoPizza'
 import { CardInfo } from './components/cardInfo/CardInfo'
 import { PageHeader } from './components/header/PageHeader'
 import { DollarSign, Package, LineChart, TrendingUp } from "lucide-react"
 import { useState } from 'react'
-import { getMesComMaisVendas, produtoMaisVendido, totalProdutoVendido } from './lib/analise'
+import { getMesComMaisVendas, produtoMaisVendido, totalProdutoVendido } from './utils/analise'
 import { FiltroProduto } from './components/filtros/FiltroProduto'
 import { FiltroMes } from './components/filtros/FiltroMes'
-import { filtrarDados } from './lib/filtros'
-import { GraficoLinha } from './components/graficoLinha/GraficoLinha'
+import { filtrarDados } from './utils/filtros'
+import { GraficoLinha } from './components/graficos/GraficoLinha'
 import { CardResumo } from './components/cardResumo/CardResumo'
-
+import Dados from './data/data.json'
 
 
 
 function App() {
 
 
-  const data = [
-    {
-      "produto": "Refrigerante",
-      "vendas": [
-        { "mes": "Janeiro", "quantidade": 120 },
-        { "mes": "Fevereiro", "quantidade": 150 },
-        { "mes": "Março", "quantidade": 130 },
-        { "mes": "Abril", "quantidade": 170 },
-        { "mes": "Maio", "quantidade": 160 },
-        { "mes": "Junho", "quantidade": 140 }
-      ]
-    },
-    {
-      "produto": "Suco",
-      "vendas": [
-        { "mes": "Janeiro", "quantidade": 80 },
-        { "mes": "Fevereiro", "quantidade": 95 },
-        { "mes": "Março", "quantidade": 100 },
-        { "mes": "Abril", "quantidade": 90 },
-        { "mes": "Maio", "quantidade": 110 },
-        { "mes": "Junho", "quantidade": 105 }
-      ]
-    },
-    {
-      "produto": "Salgadinho",
-      "vendas": [
-        { "mes": "Janeiro", "quantidade": 60 },
-        { "mes": "Fevereiro", "quantidade": 75 },
-        { "mes": "Março", "quantidade": 70 },
-        { "mes": "Abril", "quantidade": 95 },
-        { "mes": "Maio", "quantidade": 85 },
-        { "mes": "Junho", "quantidade": 90 }
-      ]
-    }
-  ]
+  const data = Dados
   const produtos = data.map(item => item.produto)
   const [produtoSelecionado, setProdutoSelecionado] = useState<string>("Todos")
   const [mesSelecionado, setMesSelecionado] = useState<string>("Todos");
@@ -68,7 +34,7 @@ function App() {
   return (
     <>
       <PageHeader
-        titulo="Dashboard"
+        titulo="Easy Dashboard"
         descricao="Análise de vendas por produto e período"
       />
 
@@ -108,7 +74,7 @@ function App() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 px-4 mb-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 px-4 mb-8 ">
         <GraficoBarra data={dadosFiltrados} />
         <GraficoLinha data={dadosFiltrados} />
       </div>

@@ -1,54 +1,120 @@
-# React + TypeScript + Vite
+# Dashboard de Vendas - Easysecrets
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um dashboard interativo para análise de vendas, desenvolvido com **React 19**, **TypeScript** e **Vite**. Ele permite visualizar e filtrar dados de vendas por produto e mês, exibindo gráficos dinâmicos e resumos executivos.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Como Rodar Localmente
 
-## Expanding the ESLint configuration
+1. **Clone o repositório:**
+   ```sh
+   git clone https://github.com/seu-usuario/grafico2.git
+   cd grafico2
+   npm install
+   npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. **Instale as dependências:**
+  ```sh
+   npm install
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. **Inicie o servidor de desenvolvimento**
+  ```sh
+   npm run dev
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Demonstração
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+> **Acesse localmente:**  
+> Após rodar o projeto, acesse [http://localhost:5173](http://localhost:5173)
+
+---
+
+## Funcionalidades
+
+- **Gráficos dinâmicos:** Barra, linha e pizza, usando [Recharts](https://recharts.org/)
+- **Resumo executivo:** Cards com indicadores-chave (total, produto líder, melhor mês, média mensal)
+- **Filtros:** Por produto e por mês
+- **Tema claro/escuro:** Alternância rápida e persistente
+- **Layout responsivo:** Visualização adaptada para desktop e mobile
+- **Componentização:** Fácil manutenção e expansão
+
+---
+
+## Tecnologias Utilizadas
+
+- [Vite](https://vitejs.dev/)
+  - Suporte nativo a TypeScript, JSX, CSS Modules e muito mais, sem necessidade de configuração pesada.
+  - Desenvolvimento mais agil comparando com Create React App
+- [Tailwind CSS 4](https://tailwindcss.com/)
+  - Reduz drasticamente a criação de CSS manual, evitando arquivos grandes e difíceis de manter.
+  - Totalmente responsivo, mobile-first e altamente customizável.
+  - Permite estilização diretamente no HTML/JSX usando classes utilitárias.
+- [Recharts](https://recharts.org/)
+  - Utilizei essa biblioteca para renderizar graficos juntamente com o ShadCnUi
+  - Integração nativa com o React
+- [Lucide React](https://lucide.dev/) (ícones)
+  - Compatível nativamente com React, com instalação e uso extremamente simples.
+  - Ícones modernos, minimalistas e vetoriais.
+- [shadcnUI](https://ui.shadcn.com/)
+  - Componentes prontos, acessíveis e com estilização elegante, seguindo boas práticas de UX/UI.
+  - Integração direta com Tailwind, com foco em design limpo e moderno.
+  - Reduz drasticamente o tempo de desenvolvimento de interfaces, sem abrir mão da customização.
+
+---
+
+## Estrutura do Projeto
+
+
+
+```sh
+   grafico2/
+├── src/
+│   ├── App.tsx
+│   ├── App.css
+│   ├── main.tsx
+│   ├── index.css
+│   ├── vite-env.d.ts
+│   ├── data/
+│   │   └── data.json
+│   ├── components/
+│   │   ├── cardInfo/
+│   │   │   └── CardInfo.tsx
+│   │   ├── cardResumo/
+│   │   │   ├── CardResumo.tsx
+│   │   │   └── miniCard.tsx
+│   │   ├── filtros/
+│   │   │   ├── FiltroMes.tsx
+│   │   │   └── FiltroProduto.tsx
+│   │   ├── graficos/
+│   │   │   ├── graficoBarra.tsx
+│   │   │   ├── GraficoLinha.tsx
+│   │   │   └── GraficoPizza.tsx
+│   │   ├── header/
+│   │   │   └── PageHeader.tsx
+│   │   ├── theme/
+│   │   │   ├── MudarTema.tsx
+│   │   │   └── theme-provider.tsx
+│   │   └── ui/
+│   │       ├── button.tsx
+│   │       ├── card.tsx
+│   │       ├── chart.tsx
+│   │       ├── dropdown-menu.tsx
+│   │       └── select.tsx
+│   ├── lib/
+│   │   └── utils.ts
+│   ├── types/
+│   │   ├── card.ts
+│   │   ├── filtros.ts
+│   │   ├── header.ts
+│   │   └── types.ts
+│   ├── utils/
+│   │   ├── analise.ts
+│   │   └── filtros.ts
+├── components.json
+├── index.html
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+├── .gitignore
+├── README.md

@@ -6,7 +6,7 @@ import { type CardProps } from "@/types/card"
 export function CardInfo({ titulo, valor, icon, className }: CardProps) {
     return (
         <>
-            <Card className={cn("w-full hover:shadow-lg transition duration-300 ease-in-out", className)}>
+            <Card className={cn("w-full hover:bg-orange-400 hover:text-white cursor-pointer transition-all duration-300 ease-in-out", className)}>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium text-muted-foreground">
                         {titulo}

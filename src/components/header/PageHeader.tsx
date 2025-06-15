@@ -12,13 +12,14 @@ export function PageHeader({ titulo, descricao, children }: PageHeaderProps) {
             <p className="mt-2 text-muted-foreground">{descricao}</p>
           </div>
           <div className="flex items-center space-x-2">
-            <BarChart3 className="h-8 w-8 text-primary" />
+            <BarChart3 className="h-8 w-8 text-orange-400" />
             <span className="text-xl font-semibold text-foreground">Vendas</span>
+              <MudarTema/>
           </div>
           {children && <div className="mt-2 sm:mt-0">{children}</div>}
         </div>
         <div className="mt-4 flex justify-end">
-          <MudarTema/>
+        
         </div>
       </div>
     </div>

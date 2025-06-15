@@ -10,15 +10,15 @@ export function MudarTema() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
-          <Sun className="h-5 w-5 transition-all dark:hidden" />
-          <Moon className="absolute h-5 w-5 transition-all hidden dark:block" />
+          <Sun className="h-5 w-5 transition-all dark:hidden text-orange-400" />
+          <Moon className="absolute h-5 w-5 transition-all hidden dark:block text-orange-400" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
+        <DropdownMenuItem className="data-[highlighted]:bg-orange-500 data-[highlighted]:text-white cursor-pointer" onClick={() => setTheme("light")}>Light</DropdownMenuItem>
+        <DropdownMenuItem className="data-[highlighted]:bg-orange-500 data-[highlighted]:text-white cursor-pointer" onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
+        <DropdownMenuItem className="data-[highlighted]:bg-orange-500 data-[highlighted]:text-white cursor-pointer" onClick={() => setTheme("system")}>System</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )

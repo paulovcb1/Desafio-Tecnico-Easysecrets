@@ -43,7 +43,7 @@ export function GraficoPizza({ data }: Props) {
   const dadosFormatados = transformarDados(data)
 
   return (
-    <Card className="flex flex-col  hover:shadow-lg transition duration-300 ease-in-out">
+    <Card className="flex flex-col  hover:shadow-lg transition duration-300 ease-in-out ">
       <CardHeader className="items-center pb-0">
         <CardTitle>Gráfico de Vendas</CardTitle>
         <CardDescription>Janeiro - Junho 2025</CardDescription>
@@ -65,6 +65,7 @@ export function GraficoPizza({ data }: Props) {
               nameKey="name"
               stroke="0"
               labelLine={false}
+               outerRadius={80}
               label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
             >
               {dadosFormatados.map((entry, index) => (

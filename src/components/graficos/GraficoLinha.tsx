@@ -65,12 +65,11 @@ export function GraficoLinha( {data}: Props) {
   const dadosFormatados = transformarDadosPorMes(data)
   console.log(dadosFormatados)
   return (
-    <Card>
+    <Card className="flex flex-col p-4 hover:shadow-lg transition duration-300 ease-in-out ">
       <CardHeader>
         <CardTitle>Tendencia Mensal</CardTitle>
         <CardDescription>Janeiro - Junho 2025</CardDescription>
       </CardHeader>
-      <CardContent >
         <ChartContainer config={configGrafico}>
           <LineChart
             accessibilityLayer
@@ -113,7 +112,6 @@ export function GraficoLinha( {data}: Props) {
             />
           </LineChart>
         </ChartContainer>
-      </CardContent>
     </Card>
   )
 }

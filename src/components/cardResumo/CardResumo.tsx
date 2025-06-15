@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Props } from "../../types/types"
 import { MiniCard } from "./miniCard"
-import { getMesComMaisVendas, produtoMaisVendido, totalProdutoVendido } from "@/lib/analise"
+import { getMesComMaisVendas, produtoMaisVendido, totalProdutoVendido } from "@/utils/analise"
 
 export function CardResumo({ data }: Props) {
     const produtoLider = produtoMaisVendido(data)
@@ -16,7 +16,7 @@ export function CardResumo({ data }: Props) {
         quantidadeDeMeses > 0 ? totalVendas / quantidadeDeMeses : 0
 
     return (
-        <Card className="p-6 h-full">
+        <Card className="p-6 h-full ">
             <CardHeader className="pb-3">
                 <CardTitle className="text-xl">Resumo Executivo</CardTitle>
             </CardHeader>

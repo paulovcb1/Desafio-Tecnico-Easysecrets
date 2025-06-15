@@ -13,7 +13,7 @@ export function FiltroMes({ mesSelecionado, onChange, meses }: FiltroMesProps) {
       </SelectTrigger>
       <SelectContent>
         {meses.map((mes) => (
-          <SelectItem key={mes} value={mes}>
+          <SelectItem className="data-[highlighted]:bg-orange-500 data-[highlighted]:text-white cursor-pointer" key={mes} value={mes}>
             {mes}
           </SelectItem>
         ))}

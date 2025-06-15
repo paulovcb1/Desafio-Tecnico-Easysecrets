@@ -24,14 +24,24 @@ export function FiltroProduto({
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Selecione o Produto" />
         </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="Todos">Todos</SelectItem>
-          {produtos.map((produto) => (
-            <SelectItem key={produto} value={produto}>
-              {produto}
+          <SelectContent>
+            <SelectItem
+              value="Todos"
+              className="data-[highlighted]:bg-orange-500 data-[highlighted]:text-white cursor-pointer"
+            >
+              Todos
             </SelectItem>
-          ))}
-        </SelectContent>
+
+            {produtos.map((produto) => (
+              <SelectItem
+                key={produto}
+                value={produto}
+                className="data-[highlighted]:bg-orange-500 data-[highlighted]:text-white cursor-pointer"
+              >
+                {produto}
+              </SelectItem>
+            ))}
+          </SelectContent>
       </Select>
     </div>
   )
