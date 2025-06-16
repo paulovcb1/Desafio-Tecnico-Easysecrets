@@ -63,59 +63,49 @@ Este projeto foi realizada como um Desafio tecnico para a empresa Easysecrets, d
 
 ## Estrutura do Projeto
 ```bash
-   grafico2/
-├── src/
-│   ├── App.tsx
-│   ├── App.css
-│   ├── main.tsx
-│   ├── index.css
-│   ├── vite-env.d.ts
-│   ├── data/
-│   │   └── data.json
-│   ├── components/
-│   │   ├── cardInfo/
-│   │   │   └── CardInfo.tsx
-│   │   ├── cardResumo/
-│   │   │   ├── CardResumo.tsx
-│   │   │   └── miniCard.tsx
-│   │   ├── filtros/
-│   │   │   ├── FiltroMes.tsx
-│   │   │   └── FiltroProduto.tsx
-│   │   ├── graficos/
-│   │   │   ├── graficoBarra.tsx
-│   │   │   ├── GraficoLinha.tsx
-│   │   │   └── GraficoPizza.tsx
-│   │   ├── header/
-│   │   │   └── PageHeader.tsx
-│   │   ├── theme/
-│   │   │   ├── MudarTema.tsx
-│   │   │   └── theme-provider.tsx
-│   │   └── ui/
-│   │       ├── button.tsx
-│   │       ├── card.tsx
-│   │       ├── chart.tsx
-│   │       ├── dropdown-menu.tsx
-│   │       └── select.tsx
-│   ├── lib/
-│   │   └── utils.ts
-│   ├── types/
-│   │   ├── card.ts
-│   │   ├── filtros.ts
-│   │   ├── header.ts
-│   │   └── types.ts
-│   ├── utils/
-│   │   ├── analise.ts
-│   │   └── filtros.ts
-├── components.json
-├── index.html
-├── package.json
-├── vite.config.ts
-├── tsconfig.json
-├── tsconfig.app.json
-├── tsconfig.node.json
-├── .gitignore
-├── README.md
-```
+  Desafio/
+├── src/                             # Contém o código-fonte principal da aplicação
+│   ├── App.tsx                      # Componente principal da aplicação React
+│   ├── App.css                      # Estilos CSS para o componente App
+│   ├── main.tsx                     # Ponto de entrada da aplicação, renderiza o App
+│   ├── index.css                    # Estilos globais da aplicação
+│   ├── vite-env.d.ts                # Definições de tipos para o Vite (configuração do ambiente)
+│   ├── data/                        
+│   │   └── data.json                # Arquivo JSON. 
+│   ├── components/                  
+│   │   ├── cardInfo/              
+│   │   │   └── CardInfo.tsx         # Componente para exibir informações em formato de cartão
+│   │   ├── cardResumo/             
+│   │   │   ├── CardResumo.tsx       # Componente de cartão para resumo de dados
+│   │   │   └── miniCard.tsx         # Componente menor para exibir informações resumidas
+│   │   ├── filtros/                
+│   │   │   ├── FiltroMes.tsx        # Componente para filtrar dados por mês
+│   │   │   └── FiltroProduto.tsx    # Componente para filtrar dados por produto
+│   │   ├── graficos/                
+│   │   │   ├── graficoBarra.tsx     # Componente para exibir gráfico de barras
+│   │   │   ├── GraficoLinha.tsx     # Componente para exibir gráfico de linhas
+│   │   │   └── GraficoPizza.tsx     # Componente para exibir gráfico de pizza
+│   │   ├── header/                 
+│   │   │   └── PageHeader.tsx       # Componente para o cabeçalho da aplicação
+│   │   ├── theme/                  
+│   │   │   ├── MudarTema.tsx        # Componente para alternar entre temas (ex.: claro/escuro)
+│   │   │   └── theme-provider.tsx   # Provedor de contexto para gerenciar temas
+│   │   └── ui/                      
+│   │       ├── button.tsx           # Componente de botão reutilizável
+│   │       ├── card.tsx             # Componente de cartão genérico
+│   │       ├── chart.tsx            # Componente base para renderização de gráficos
+│   │       ├── dropdown-menu.tsx    # Componente de menu suspenso
+│   │       └── select.tsx           # Componente de seleção (dropdown)
+│   ├── lib/                        
+│   │   └── utils.ts                 # Funções do shadCnUi
+│   ├── types/                       
+│   │   ├── card.ts                  # Tipos relacionados a componentes de cartão
+│   │   ├── filtros.ts               # Tipos para os filtros (ex.: mês, produto)
+│   │   ├── header.ts                # Tipos para o componente de cabeçalho
+│   │   └── types.ts                 # Tipos gerais da aplicação
+│   ├── utils/                       
+│   │   ├── analise.ts               # Funções para análise de dados
+│   │   └── filtros.ts               # Funções para manipulação e aplicação de filtros
 ---
 
 ## Arquitetura
