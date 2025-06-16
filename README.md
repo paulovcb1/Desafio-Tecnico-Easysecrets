@@ -53,7 +53,7 @@ Este projeto foi realizada como um Desafio tecnico para a empresa Easysecrets, d
   - Compatível nativamente com React, com instalação e uso extremamente simples.
   - Ícones modernos, minimalistas e vetoriais.
 - **[shadcnUI](https://ui.shadcn.com/)**
-  - Componentes prontos, acessíveis e com estilização elegante, seguindo boas práticas de UX/UI.
+  - Componentes prontos, acessíveis e com estilização moderna e minimalista, seguindo boas práticas de UX/UI.
   - Integração direta com Tailwind, com foco em design limpo e moderno.
   - Reduz drasticamente o tempo de desenvolvimento de interfaces, sem abrir mão da customização.
 
@@ -114,18 +114,16 @@ Este projeto foi realizada como um Desafio tecnico para a empresa Easysecrets, d
 ├── .gitignore
 ├── README.md
 ```
+---
+
 ## Arquitetura
 
 Durante o desenvolvimento do projeto, tomei algumas decisões técnicas pensando em escalabilidade e organização.
-
----
 
 ### Funções Unitárias
 
 - Criei uma pasta `utils` para centralizar funções específicas e reutilizáveis.  
 - Isso evita poluir os componentes, mantendo o código mais limpo, organizado e de fácil manutenção.
-
----
 
 ### Tailwind CSS para Estilização
 
@@ -135,7 +133,6 @@ Durante o desenvolvimento do projeto, tomei algumas decisões técnicas pensando
   - Reduz a quantidade de arquivos CSS no projeto.  
   - Integra-se perfeitamente com os componentes do [shadcn/ui](https://ui.shadcn.com/), mantendo um visual moderno, consistente e escalável.
 
----
 
 ###  Variedade de Tipos de Gráficos
 
@@ -148,8 +145,6 @@ Durante o desenvolvimento do projeto, tomei algumas decisões técnicas pensando
   - Integra-se diretamente com os filtros de **produto** e **mês**, proporcionando interatividade e dinamismo.  
   - Suporta escalabilidade, já que novos tipos de gráficos podem ser adicionados facilmente na pasta `components/charts/` com mínima refatoração.
 
----
-
 ###  Filtros Interativos por Produto e Mês
 
 - Implementei filtros dinâmicos, permitindo ao usuário:  
@@ -158,8 +153,6 @@ Durante o desenvolvimento do projeto, tomei algumas decisões técnicas pensando
 - Esses filtros tornam a análise mais prática, ágil e direcionada, melhorando a experiência do usuário.
 
 ---
-  
-
   ## Diferenciais
   O projeto não se resume apenas na exibição de dados, ele segue conceitos avançados e UI, com interface moderna e utilidade prática.
 
