@@ -163,7 +163,12 @@ Durante o desenvolvimento do projeto, tomei algumas decisões técnicas pensando
   - **Resposividade**
     - Projeto é totalmente responsivo, garantindo a qualidade da informação em diferentes tamanhos de telas
   - **Desing Minimalista e Funcional**
-    - O layout foi projeto para ser minimalista moderno e funcional, utilizando tecnologias mais novas e proporcionando uma navegação intuitiva 
+    - O layout foi projeto para ser minimalista e moderno, utilizando tecnologias mais novas e proporcionando uma navegação intuitiva e funcional.
+
+  - **Cards Informativos**
+    - O projeto contem cards informativos onde é possivel ver Total de vendas, Mês com mais vendas, produto mais vendido e etc
+  - **Filtros**
+    - O Projeto contem Filtros de Mês e produtos, que funcionam dinamicamente com os graficos melhorando assim a experiência do usuário
 
     --- 
   Desenvolvido por Paulo Barbosa
