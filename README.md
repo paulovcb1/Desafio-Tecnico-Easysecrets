@@ -8,9 +8,7 @@ Este projeto é um dashboard interativo para análise de vendas, desenvolvido co
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/seu-usuario/grafico2.git
-   cd grafico2
-   npm install
-   npm run dev
+   cd Desafio
    ```
 2. **Instale as dependências:**
   ```bash
@@ -116,12 +114,40 @@ Este projeto é um dashboard interativo para análise de vendas, desenvolvido co
 ├── .gitignore
 ├── README.md
 ```
-## Decisões Tecnicas e Arquitetura
+## Arquitetura
+  Durante o desenvolvimento do proejeto, tomei algumas decisões tecnicas pensando em escalabilidade
+  e organização.
 
-- **Gráficos dinâmicos:** Barra, linha e pizza, usando [Recharts](https://recharts.org/)
-- **Resumo executivo:** Cards com indicadores-chave (total, produto líder, melhor mês, média mensal)
-- **Filtros:** Por produto e por mês
-- **Tema claro/escuro:** Alternância rápida e persistente
-- **Layout responsivo:** Visualização adaptada para desktop e mobile
-- **Componentização:** Fácil manutenção e expansão
+  - **Funções unitarias**
+  Optei por criar uma pasta utils onde separo funçoes especificas, evitando poluir os componentes, mantendo o codigo mais limpo
 
+  - **Tailwind CSS para Estilização**  
+  Utilizei o [Tailwind](https://tailwindcss.com/) como framework de estilização, aplicando classes utilitárias diretamente no JSX.  
+  - Acelera o desenvolvimento, eliminando a necessidade de escrever CSS manual extenso e diminuindo quantidade de arquivo no proejeto.  
+  - Integra-se perfeitamente com os componentes do [Shadcn/ui](https://ui.shadcn.com/), mantendo um visual moderno e coeso.
+
+  - **Variedade de tipos de gráficos** 
+  Oferece flexibilidade para exibir dados de vendas de forma clara e diversificada.  
+  - Permite análises visuais complementares, como tendências (linhas), distribuições (pizza) e comparações (barras).  
+  - Facilita a integração com os filtros de produto e mês, garantindo interatividade e dinamismo.  
+  - Suporta escalabilidade, pois novos tipos de gráficos podem ser adicionados à pasta `components/charts/` com mínima refatoração.
+
+  - **Filtros Interativos por Produto e Mês**  
+  Implementei filtros dinâmicos por produto, permitindo aos usuários personalizar a visualização dos dados de vendas. 
+  
+
+  ## Diferenciais
+  O projeto não se resume apenas na exibição de dados, ele segue conceitos avançados e UI, com interface moderna e utilidade prática.
+
+  - **Variedade no tipo de gráficos**
+    - Desenvolvido em graficos, pizza, barra e linhas, maximizando a informação vindo dos dados
+  - **Tema Light e Dark**
+    - A aplicação oferece suporte para o tema claro, escuro e o tema do sistema do aparelho, permitindo uma experiência visual mais confortavel
+  - **Resposividade**
+    - Projeto é totalmente responsivo, garantindo a qualidade da informação em diferentes tamanhos de telas
+  - **Desing Minimalista e Funcional**
+    - O layout foi projeto para ser minimalista moderno e funcional, utilizando tecnologias mais novas e proporcionando uma navegação intuitiva 
+
+    --- 
+  Desenvolvido por Paulo Barbosa
+  
