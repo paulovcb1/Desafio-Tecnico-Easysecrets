@@ -1,6 +1,6 @@
 # Dashboard de Vendas - Easysecrets
 
-Este projeto é um dashboard interativo para análise de vendas, desenvolvido com **React 19**, **TypeScript** e **Vite**. Ele permite visualizar e filtrar dados de vendas por produto e mês, exibindo gráficos dinâmicos e resumos executivos.
+Este projeto foi realizada como um Desafio tecnico para a empresa Easysecrets, desenvolvido com **React 19**, **TypeScript** e **Vite**. Ele permite visualizar e filtrar dados de vendas por produto e mês, exibindo gráficos dinâmicos e resumos executivos.
 
 
 ## Como Rodar Localmente
@@ -115,25 +115,49 @@ Este projeto é um dashboard interativo para análise de vendas, desenvolvido co
 ├── README.md
 ```
 ## Arquitetura
-  Durante o desenvolvimento do proejeto, tomei algumas decisões tecnicas pensando em escalabilidade
-  e organização.
 
-  - **Funções unitarias**
-  Optei por criar uma pasta utils onde separo funçoes especificas, evitando poluir os componentes, mantendo o codigo mais limpo
+Durante o desenvolvimento do projeto, tomei algumas decisões técnicas pensando em escalabilidade e organização.
 
-  - **Tailwind CSS para Estilização**  
-  Utilizei o [Tailwind](https://tailwindcss.com/) como framework de estilização, aplicando classes utilitárias diretamente no JSX.  
-  - Acelera o desenvolvimento, eliminando a necessidade de escrever CSS manual extenso e diminuindo quantidade de arquivo no proejeto.  
-  - Integra-se perfeitamente com os componentes do [Shadcn/ui](https://ui.shadcn.com/), mantendo um visual moderno e coeso.
+---
 
-  - **Variedade de tipos de gráficos** 
-  Oferece flexibilidade para exibir dados de vendas de forma clara e diversificada.  
-  - Permite análises visuais complementares, como tendências (linhas), distribuições (pizza) e comparações (barras).  
-  - Facilita a integração com os filtros de produto e mês, garantindo interatividade e dinamismo.  
-  - Suporta escalabilidade, pois novos tipos de gráficos podem ser adicionados à pasta `components/charts/` com mínima refatoração.
+### Funções Unitárias
 
-  - **Filtros Interativos por Produto e Mês**  
-  Implementei filtros dinâmicos por produto, permitindo aos usuários personalizar a visualização dos dados de vendas. 
+- Criei uma pasta `utils` para centralizar funções específicas e reutilizáveis.  
+- Isso evita poluir os componentes, mantendo o código mais limpo, organizado e de fácil manutenção.
+
+---
+
+### Tailwind CSS para Estilização
+
+- Utilizei o [Tailwind CSS](https://tailwindcss.com/) como framework de estilização, aplicando classes utilitárias diretamente no JSX.  
+- **Vantagens:**  
+  - Acelera o desenvolvimento, eliminando a necessidade de escrever CSS manual extenso.  
+  - Reduz a quantidade de arquivos CSS no projeto.  
+  - Integra-se perfeitamente com os componentes do [shadcn/ui](https://ui.shadcn.com/), mantendo um visual moderno, consistente e escalável.
+
+---
+
+###  Variedade de Tipos de Gráficos
+
+- Oferece flexibilidade para exibir dados de vendas de forma clara e diversificada.  
+- **Benefícios:**  
+  - Permite análises visuais complementares, como:  
+    - **Tendências:** gráficos de linha.  
+    - **Distribuições:** gráficos de pizza.  
+    - **Comparações:** gráficos de barras.  
+  - Integra-se diretamente com os filtros de **produto** e **mês**, proporcionando interatividade e dinamismo.  
+  - Suporta escalabilidade, já que novos tipos de gráficos podem ser adicionados facilmente na pasta `components/charts/` com mínima refatoração.
+
+---
+
+###  Filtros Interativos por Produto e Mês
+
+- Implementei filtros dinâmicos, permitindo ao usuário:  
+  - Personalizar a visualização dos dados.  
+  - Realizar consultas específicas por **produto** e **mês**.  
+- Esses filtros tornam a análise mais prática, ágil e direcionada, melhorando a experiência do usuário.
+
+---
   
 
   ## Diferenciais
