@@ -8,7 +8,7 @@ Este projeto foi realizada como um Desafio tecnico para a empresa Easysecrets, d
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/paulovcb1/Desafio-Tecnico-Easysecrets.git
-   cd Desafio
+   cd Desafio-Tecnico-Easysecrets
    ```
 2. **Instale as dependências:**
   ```bash
