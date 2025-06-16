@@ -18,11 +18,13 @@ Este projeto foi realizada como um Desafio tecnico para a empresa Easysecrets, d
   ```bash
    npm run dev
  ```
+4. **Acesse a URL do projeto**
+ Após rodar o projeto, acesse http://localhost:5173/
 
 ## Demonstração
 
-> **Acesse localmente:**  
-> Após rodar o projeto, acesse [http://localhost:5173](http://localhost:5173)
+> **Acesse agora mesmo:**  
+> Acesso o projeto online no link: [https://desafio-tecnico-easysecrets-ten.vercel.app/](https://desafio-tecnico-easysecrets-ten.vercel.app/)
 
 ---
 
