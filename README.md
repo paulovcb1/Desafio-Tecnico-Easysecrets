@@ -89,7 +89,7 @@ Este projeto foi realizada como um Desafio tecnico para a empresa Easysecrets, d
 │   │   │   └── PageHeader.tsx       # Componente para o cabeçalho da aplicação
 │   │   ├── theme/                  
 │   │   │   ├── MudarTema.tsx        # Componente para alternar entre temas (ex.: claro/escuro)
-│   │   │   └── theme-provider.tsx   # Provedor de contexto para gerenciar temas
+│   │   │   └── ThemeProvider.tsx   # Provedor de contexto para gerenciar temas
 │   │   └── ui/                      
 │   │       ├── button.tsx           # Componente de botão reutilizável
 │   │       ├── card.tsx             # Componente de cartão genérico
