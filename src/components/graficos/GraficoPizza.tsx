@@ -68,7 +68,7 @@ export function GraficoPizza({ data }: Props) {
                outerRadius={80}
               label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
             >
-              {dadosFormatados.map((entry, index) => (
+              {dadosFormatados.map((_, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}
