@@ -106,6 +106,8 @@ Este projeto foi realizada como um Desafio tecnico para a empresa Easysecrets, d
 │   ├── utils/                       
 │   │   ├── analise.ts               # Funções para análise de dados
 │   │   └── filtros.ts               # Funções para manipulação e aplicação de filtros
+
+```
 ---
 
 ## Arquitetura
